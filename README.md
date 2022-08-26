@@ -1,0 +1,1 @@
+# bareboot-initial-metadata
