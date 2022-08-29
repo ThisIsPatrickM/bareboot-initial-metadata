@@ -1,0 +1,10 @@
+name: va41620_dev_board
+byteorder: 'little'
+metadata_label_address: 0x350
+hmac_key_size: 32
+hmac_signature_size: 32
+pointer_size: 4
+size_t_size: 4
+bootloader_size: 4096 # 4KB from Linkerscript
+max_image_size: 64512 # Also size of a image slot
+number_of_images: 4

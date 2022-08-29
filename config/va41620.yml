@@ -1,0 +1,20 @@
+# Automatically generated. Don't edit manually
+bootloader_size: 4096
+byteorder: little
+first_completion_status_offset: 916
+first_crc_offset: 896
+first_hmac_offset: 920
+first_image_metadata_offset: 892
+first_length_offset: 912
+hmac_key_offset: 860
+image_begin_addresses:
+- 4096
+- 262144
+- 520192
+- 778240
+- 1036288
+- 1294336
+- 1552384
+max_image_size: 258048
+name: va41620
+size_of_metadata: 60

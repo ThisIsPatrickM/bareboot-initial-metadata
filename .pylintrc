@@ -1,0 +1,6 @@
+[MASTER]
+disable=
+    C0114, # missing-module-docstring
+    unspecified-encoding,
+    c-extension-no-member,
+    too-few-public-methods,
