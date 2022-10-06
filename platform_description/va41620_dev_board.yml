@@ -6,5 +6,5 @@ hmac_signature_size: 32
 pointer_size: 4
 size_t_size: 4
 bootloader_size: 4096 # 4KB from Linkerscript
-max_image_size: 64512 # Also size of a image slot
-number_of_images: 4
+max_image_size: 86016 # Also size of a image slot
+number_of_images: 3

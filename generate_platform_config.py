@@ -19,6 +19,8 @@ GLOBAL_METADATA_SIZE_TEMPLATE = {"globalBootCounter": 4,
                                  "prefferedImage": "size_t_size",
                                  "currentImage": "size_t_size",
                                  "hmacKey1": "hmac_key_size",
+                                 "hmacKey2": "hmac_key_size",
+                                 "hmacKey3": "hmac_key_size",
                                  "imageMetadata": 0
                                  }
 

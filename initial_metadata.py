@@ -194,7 +194,8 @@ def fix_metadata(output_file, global_metadata: GlobalImageMetadata, config):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Patch Binary')
-    parser.add_argument("--images", nargs="+", help='paths to image files')
+    parser.add_argument("--images", nargs="+",
+                        help='Path to image files. Can take multiple paths!')
     parser.add_argument('--bootloader', type=str,
                         help='path to bootloader file')
     parser.add_argument("--key_file", type=str,
@@ -207,11 +208,12 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     # Select Configuration:
-    with open(f"config/{args.config}.yml") as config_file:
+    with open(f"{os.path.dirname(__file__)}/config/{args.config}.yml") as config_file:
         configuration = yaml.load(config_file, Loader=yaml.FullLoader)
 
         # Construct Metadata
         global_image_metadata = GlobalImageMetadata()
+
         for image_file_name in args.images:
             extract_image_metadata(global_image_metadata,
                                    image_file_name, args.key_file)
@@ -225,4 +227,4 @@ if __name__ == '__main__':
         # Write Metadata
         fix_metadata(args.out, global_image_metadata, configuration)
         global_image_metadata.print()
-        print("Done")
+        print(f"Created Binary: {os.getcwd()}/{args.out}")
